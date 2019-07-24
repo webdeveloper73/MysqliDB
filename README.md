@@ -47,3 +47,9 @@ $db->insert("users",$data);
 $insert_id = $db->insertID();
 ```
 ### update($tbl,$data,$escape)
+Update data in a given table
+```php
+<?php
+//UPDATE `users` SET `username` = 'newUsername',`bio` => 'hello world' WHERE `id` = 5
+$db->update("users",["username" => "newUsername","bio" = "hello world"])->where("id",5);
+```
