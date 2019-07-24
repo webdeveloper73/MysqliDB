@@ -70,3 +70,5 @@ $string = $db->escape($string);
 $db->update("users",["bio" => $string])->where("id",5);
 ```
 ### num_rows()
+Get number of rows in a result set
+```php
