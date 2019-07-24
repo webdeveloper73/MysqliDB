@@ -7,7 +7,7 @@ This mysql database class makes it easy to build queries and interact with your 
 $db = new MysqliDB(["mysql_host","mysql_user","mysql_password","mysql_database"]);
 ```
 ### rawQuery($query)
-To simply run your own query instead of the query builder methods you would use the method rawQuery
+To simply run your own query instead of using the query builder methods you would use the method rawQuery
 ```php
 <?php
 $q = $db->rawQuery("SELECT * FROM `posts`");
