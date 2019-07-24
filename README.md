@@ -31,3 +31,19 @@ $data = [
 //Insert the data into users table
 $db->insert("users",$data);
 ```
+### insertID()
+Gets id of last inserted record
+```php
+$data = [
+"username" => "username",
+"password" => "pass",
+"about_me" => "some about me"
+];
+
+//Insert the data into users table
+$db->insert("users",$data);
+
+//Insert id
+$insert_id = $db->insertID();
+```
+### update($tbl,$data,$escape)
