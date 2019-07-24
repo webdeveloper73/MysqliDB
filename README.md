@@ -50,6 +50,22 @@ $insert_id = $db->insertID();
 Update data in a given table
 ```php
 <?php
-//UPDATE `users` SET `username` = 'newUsername',`bio` => 'hello world' WHERE `id` = 5
-$db->update("users",["username" => "newUsername","bio" = "hello world"])->where("id",5);
+//UPDATE `users` SET `username` = 'newUsername',`bio` = 'hello world' WHERE `id` = 5
+$db->update("users",["username" => "newUsername","bio" => "hello world"])->where("id",5);
+```
+you can pass false as a 3rd parameter in order to not escape data
+
+### delete()
+Starts off a DELETE query
+```php
+//DELETE FROM `users` WHERE `id` = 5
+$db->delete()->from("users")->where("id",5);
+```
+### escape($str)
+Makes data safe for passing to a mysql query
+```php
+$string = "this 's is an unsafe string 's";
+$string = $db->escape($string);
+//this \'s is an unsafe string \'s
+$db->update("users",["bio",$string])->where("id",5);
 ```
