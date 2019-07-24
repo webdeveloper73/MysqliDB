@@ -72,3 +72,8 @@ $db->update("users",["bio" => $string])->where("id",5);
 ### num_rows()
 Get number of rows in a result set
 ```php
+//SELECT * FROM `users`
+$db->select()->from("users")->run();
+//Returns something like 15
+$num_rows = $db->num_rows();
+```
