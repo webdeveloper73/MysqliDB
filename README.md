@@ -67,5 +67,6 @@ Makes data safe for passing to a mysql query
 $string = "this 's is an unsafe string 's";
 $string = $db->escape($string);
 //this \'s is an unsafe string \'s
-$db->update("users",["bio",$string])->where("id",5);
+$db->update("users",["bio" => $string])->where("id",5);
 ```
+### num_rows()
